@@ -1,6 +1,8 @@
 from django.urls import path
 from urayasubustimetable import views
+import urayasubustimetable.views as timetable
  
 urlpatterns = [
-    path('', views.IndexView.as_view(), name='index'),
+    path('', timetable.index, name='index'),
+    path('test', views.test, name="test"),
 ]
